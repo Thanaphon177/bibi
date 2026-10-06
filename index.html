@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ความทรงจำของเรา</title>
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;600;700&family=Pattaya&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+<div class="sky" id="sky" aria-hidden="true">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+</div>
+
+<main>
+  <header class="hero">
+    <button class="heart-btn" id="heart" type="button" aria-label="ส่งหัวใจ">
+      <svg viewBox="0 0 120 110" aria-hidden="true">
+        <defs>
+          <radialGradient id="hg" cx="35%" cy="28%" r="80%">
+            <stop offset="0" stop-color="#FFB8CC"/>
+            <stop offset=".45" stop-color="#FF6F96"/>
+            <stop offset="1" stop-color="#D93A6B"/>
+          </radialGradient>
+          <linearGradient id="hs" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#fff" stop-opacity=".9"/>
+            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <g class="hbody">
+          <path d="M60 98 C14 64 4 44 4 29 C4 13 17 4 32 4 C44 4 54 11 60 21 C66 11 76 4 88 4 C103 4 116 13 116 29 C116 44 106 64 60 98Z" fill="url(#hg)"/>
+          <path d="M20 24 C22 16 30 11 38 11 C44 11 48 13 51 18 C44 15 36 17 30 23 C26 27 24 32 23 38 C19 34 18 29 20 24Z" fill="url(#hs)"/>
+          <circle cx="98" cy="25" r="3.4" fill="#fff" opacity=".75"/>
+        </g>
+      </svg>
+    </button>
+    <p class="lead">สมุดความทรงจำของ</p>
+    <h1 id="names"></h1>
+
+    <section class="counter-card" aria-label="เวลาที่เราอยู่ด้วยกัน">
+      <p class="since">เราคบกันมาแล้ว</p>
+      <p class="days"><span id="days">0</span><small>วัน</small></p>
+      <div class="tiles">
+        <div class="tile"><b id="hh">00</b><span>ชั่วโมง</span></div>
+        <div class="tile"><b id="mm">00</b><span>นาที</span></div>
+        <div class="tile"><b id="ss">00</b><span>วินาที</span></div>
+      </div>
+    </section>
+    <p class="anniv" id="anniv"></p>
+    <p class="talk" id="talk"></p>
+    <p class="hint">แตะการ์ดด้านล่างเพื่ออ่านเรื่องราว 💗</p>
+    <div class="link-row">
+      <a class="gallery-link" href="gallery.html">📸 อัลบั้มรูปของเรา</a>
+      <a class="gallery-link video-link" href="videos.html">🎬 วิดีโอของเรา</a>
+    </div>
+  </header>
+
+  <ol class="timeline" id="timeline"></ol>
+
+  <div class="next">
+    <span class="pencil" aria-hidden="true">✏️</span>
+    <strong>หน้านี้ยังว่างอยู่</strong>
+    ไว้เก็บเรื่องต่อไปของเรา
+  </div>
+
+  <section class="letter" id="letter">
+    <button class="letter-btn" id="letterBtn" type="button" aria-expanded="false" aria-controls="letterPaper">💌 มีอะไรอยากบอกเธอ</button>
+    <div class="letter-paper" id="letterPaper">
+      <div>
+        <div class="letter-body">
+          <div id="letterText"></div>
+          <p class="sign" id="sign"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>อัลบั้มของเรา</title>
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;600;700&family=Pattaya&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+<div class="sky" id="sky" aria-hidden="true">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+</div>
+
+<main class="gal-main">
+  <a class="back" href="index.html">← กลับหน้าแรก</a>
+
+  <header class="gal-hero">
+    <p class="lead" id="who">อัลบั้มของเรา</p>
+    <h1>อัลบั้มของเรา</h1>
+    <p class="count" id="count"></p>
+  </header>
+
+  <div class="board" id="board"></div>
+
+  <div class="empty" id="empty" hidden>
+    <span class="big" aria-hidden="true">📷</span>
+    <strong>ยังไม่เจอรูปในอัลบั้ม</strong>
+    <p>เอารูปใส่ในโฟลเดอร์ <code>album</code> แล้วตั้งชื่อเป็น <code>01.jpg</code>, <code>02.jpg</code>, <code>03.jpg</code> ... เรียงเลขต่อกันนะ</p>
+  </div>
+</main>
+
+<dialog class="viewer" id="viewer" aria-label="ดูรูป">
+  <div class="v-wrap" id="vWrap">
+    <figure class="v-card">
+      <button class="v-close" id="vClose" type="button" aria-label="ปิด">✕</button>
+      <img id="vImg" alt="">
+    </figure>
+    <div class="v-nav" id="vNav">
+      <button class="v-btn" id="vPrev" type="button" aria-label="รูปก่อนหน้า">‹</button>
+      <span class="v-count" id="vCount"></span>
+      <button class="v-btn" id="vNext" type="button" aria-label="รูปถัดไป">›</button>
+    </div>
+  </div>
+</dialog>
+
+<script src="data.js"></script>
+<script src="gallery.js"></script>
+</body>
+</html>
